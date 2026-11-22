@@ -240,7 +240,7 @@ def render_markdown(items, meta):
     for item in items:
         if item["role"] == "user":
             prompt_number += 1
-            lines += ["## " + prompt_heading(item, prompt_number), "", "**You:**", ""]
+            lines += ["## You", ""]
         else:
             label = "Codex work log" if item["phase"] == "commentary" else "Codex"
             lines += ["**" + label + ":**", ""]
